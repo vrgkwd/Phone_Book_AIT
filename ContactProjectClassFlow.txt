@@ -1,0 +1,29 @@
+
+       29 June  2020
+
+---MODEL CLASS------
+ContactEntity  (C)
+ 
+  Long serialNumber;
+  String contactPerson;
+  String conatctEmail;
+  long concatNumber;
+ 
+---Controller layer-----
+ContactController  (C)  :: used for resentation purpose
+_______________________________
+ hompageContact():String              :: methodType= Get
+ saveContact()   :Integer             :: methodType= POST
+ getAllContact() :List<ContactEntity> :: methodType= Get
+ editConatct()   :void                :: methodType= Get
+ updateContact() :Integer             :: methodType= POST
+ removeContact() :void                :: methodType= Get
+__________________________________
+
+---Service Layer------
+ContactService      (I)   :: now a days optional if we used JpaRepo inbuild method
+ContactServiceImpl  (C)   ::  here we write business/ calculation/ core logics etc..
+
+---Repository Layer----
+ContactRepository      (I)   implements JpaReposioty<ContactEntity, Long>{}
+ContactRepositoryImpl  (C)   // optional class if we used JPA reposiotry
